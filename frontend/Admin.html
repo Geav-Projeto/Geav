@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Painel — GEAV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-pagina">
+
+    <header class="admin-topo">
+        <div class="admin-topo-in">
+            <strong class="admin-marca">GEAV · Painel</strong>
+            <span class="admin-quem" id="quem"></span>
+            <nav class="admin-nav">
+                <a href="index.html">Ver site</a>
+                <button type="button" class="admin-btn" id="btnSair">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-main">
+
+        <section class="admin-bloco">
+            <h2 id="tituloForm">Novo evento</h2>
+            <form id="formEvento" novalidate>
+                <div class="admin-campo">
+                    <label for="ev-titulo">Título *</label>
+                    <input type="text" id="ev-titulo" maxlength="150" required>
+                </div>
+                <div class="admin-linha">
+                    <div class="admin-campo">
+                        <label for="ev-inicio">Início *</label>
+                        <input type="datetime-local" id="ev-inicio" required>
+                    </div>
+                    <div class="admin-campo">
+                        <label for="ev-fim">Término</label>
+                        <input type="datetime-local" id="ev-fim">
+                    </div>
+                </div>
+                <div class="admin-campo">
+                    <label for="ev-local">Local</label>
+                    <input type="text" id="ev-local" maxlength="200">
+                </div>
+                <div class="admin-campo">
+                    <label for="ev-imagem">Imagem (link https)</label>
+                    <input type="url" id="ev-imagem" maxlength="500" placeholder="https://...">
+                    <small>Por enquanto, use o link de uma imagem já hospedada na internet.</small>
+                </div>
+                <div class="admin-campo">
+                    <label for="ev-desc">Descrição</label>
+                    <textarea id="ev-desc" rows="5" maxlength="5000"></textarea>
+                </div>
+                <p class="admin-msg" id="msgEvento" role="alert"></p>
+                <div class="admin-acoes">
+                    <button type="submit" class="admin-btn admin-btn--ouro" id="btnSalvar">Salvar como rascunho</button>
+                    <button type="button" class="admin-btn" id="btnCancelar" hidden>Cancelar edição</button>
+                </div>
+            </form>
+            <p class="admin-nota">Eventos novos ficam como rascunho. Um administrador publica e define o destaque.</p>
+        </section>
+
+        <section class="admin-bloco">
+            <h2>Eventos</h2>
+            <div id="listaEventos"></div>
+        </section>
+
+        <section class="admin-bloco" id="blocoUsuarios" hidden>
+            <h2>Usuários</h2>
+            <form id="formUsuario" novalidate>
+                <div class="admin-linha">
+                    <div class="admin-campo">
+                        <label for="us-nome">Nome *</label>
+                        <input type="text" id="us-nome" maxlength="120" required>
+                    </div>
+                    <div class="admin-campo">
+                        <label for="us-email">E-mail *</label>
+                        <input type="email" id="us-email" maxlength="255" autocomplete="off" required>
+                    </div>
+                </div>
+                <div class="admin-linha">
+                    <div class="admin-campo">
+                        <label for="us-senha">Senha * (mínimo 10 caracteres)</label>
+                        <input type="password" id="us-senha" minlength="10" maxlength="72" autocomplete="new-password" required>
+                    </div>
+                    <div class="admin-campo">
+                        <label for="us-papel">Perfil</label>
+                        <select id="us-papel">
+                            <option value="editor">Editor (cria rascunhos)</option>
+                            <option value="admin">Administrador (publica e gerencia)</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="admin-msg" id="msgUsuario" role="alert"></p>
+                <button type="submit" class="admin-btn admin-btn--ouro">Cadastrar usuário</button>
+            </form>
+            <div id="listaUsuarios"></div>
+        </section>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

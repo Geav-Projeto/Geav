@@ -1,0 +1,16 @@
+# Segredos (nunca subir para o GitHub)
+.env
+.env.*
+!.env.example
+
+# Dependências
+node_modules/
+
+# Logs e arquivos do sistema
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Uploads temporários
+uploads/

@@ -1,0 +1,71 @@
+/* ── Painel administrativo ──────────────────────── */
+.admin-pagina { background: var(--navy); color: #fff; min-height: 100vh; }
+
+.admin-topo { background: var(--navy-deep); border-bottom: 1px solid rgba(201,168,76,0.2); }
+.admin-topo-in {
+    max-width: 960px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.admin-marca { font-family: var(--font-serif); font-size: 20px; color: var(--gold); letter-spacing: 0.04em; }
+.admin-quem { font-size: 12px; color: rgba(255,255,255,0.55); flex: 1; }
+.admin-nav { display: flex; align-items: center; gap: 14px; }
+.admin-nav a { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; }
+.admin-nav a:hover { color: var(--gold); }
+
+.admin-main { max-width: 960px; margin: 0 auto; padding: 32px 24px 80px; display: grid; gap: 28px; }
+
+.admin-bloco { background: var(--navy-mid); border: 1px solid rgba(201,168,76,0.2); padding: 28px; }
+.admin-bloco[hidden] { display: none; }
+.admin-bloco h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 600; margin-bottom: 20px; }
+
+.admin-linha { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.admin-campo { margin-bottom: 16px; }
+.admin-campo label {
+    display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+}
+.admin-campo input, .admin-campo textarea, .admin-campo select {
+    width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18); color: #fff;
+    font-family: var(--font-sans); font-size: 14px;
+}
+.admin-campo select option { color: #1a1a3e; }
+.admin-campo textarea { resize: vertical; }
+.admin-campo input:focus, .admin-campo textarea:focus, .admin-campo select:focus { outline: none; border-color: var(--gold); }
+.admin-campo small { display: block; margin-top: 6px; font-size: 11px; color: rgba(255,255,255,0.4); }
+
+.admin-btn {
+    background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3);
+    padding: 9px 16px; font-family: var(--font-sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: border-color 0.2s, color 0.2s;
+}
+.admin-btn:hover { border-color: var(--gold); color: var(--gold); }
+.admin-btn--ouro { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.admin-btn--ouro:hover { opacity: 0.85; color: var(--navy); }
+.admin-btn--perigo { border-color: rgba(255,120,120,0.5); color: #ff9b9b; }
+.admin-btn--perigo:hover { border-color: #ff9b9b; color: #ff9b9b; }
+.admin-btn[hidden] { display: none; }
+
+.admin-acoes { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.admin-msg { min-height: 20px; font-size: 13px; color: #ff9b9b; margin-bottom: 10px; }
+.admin-msg--ok { color: #8fe3a8; }
+.admin-nota { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 14px; }
+.admin-vazio { font-size: 14px; color: rgba(255,255,255,0.45); }
+
+.admin-item { border: 1px solid rgba(255,255,255,0.12); padding: 16px 18px; margin-bottom: 12px; }
+.admin-item-topo { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.admin-item-titulo { font-family: var(--font-serif); font-size: 21px; font-weight: 600; margin-right: auto; }
+.admin-item-info { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 4px; }
+
+.admin-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.7);
+}
+.admin-tag--publicado { border-color: #8fe3a8; color: #8fe3a8; }
+.admin-tag--rascunho { border-color: rgba(255,255,255,0.3); }
+.admin-tag--destaque { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+@media (max-width: 700px) {
+    .admin-linha { grid-template-columns: 1fr; }
+    .admin-bloco { padding: 20px 16px; }
+}

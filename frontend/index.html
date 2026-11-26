@@ -6,7 +6,8 @@
     <title>Grupo Espírita Amor e Vida — Goiânia, GO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -27,6 +28,7 @@
                 <a href="#reunioes">Reuniões</a>
                 <a href="#trabalhos">Trabalhos Sociais</a>
                 <a href="#contato">Contato</a>
+                <a href="login.html" id="linkEntrar" class="nav-entrar">Entrar</a>
             </nav>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                 <span></span><span></span><span></span>
@@ -78,6 +80,11 @@
                     <div class="hero-scroll-line"></div>
                 </div>
             </div>
+        </section>
+
+        <!-- EVENTO EM DESTAQUE (só aparece quando um admin publicar e destacar) -->
+        <section class="destaque" id="destaque" hidden>
+            <div class="container" id="destaque-conteudo"></div>
         </section>
 
         <!-- SOBRE / MISSÃO -->
@@ -158,8 +165,11 @@
                     </div>
                     <div class="ri">
                         <p class="ri-label">Local</p>
-                        <p class="ri-val">Centro de Goiânia</p>
-                        <p class="ri-sub">Endereço completo pelo contato</p>
+                        <p class="ri-val">Parque Atheneu, Rua AT 7, Unidade 301, 2, Goiânia, Goiás</p>
+                        <p class="ri-sub">Clique no botão para abrir a localização no mapa</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=GEAV+-+Grupo+Esp%C3%ADrita+Amor+e+Vida%2C+Rua+AT+7+Unidade+301%2C+2%2C+Goi%C3%A2nia-Goi%C3%A1s%2C+Brasil"
+                           class="btn-gold" style="margin-top:14px"
+                           target="_blank" rel="noopener noreferrer">Ver localização no mapa →</a>
                     </div>
                 </div>
             </div>
@@ -222,15 +232,15 @@
                         <span class="ti-dot"></span>
                         <div>
                             <p class="ti-label">Localização</p>
-                            <p class="ti-val">Avenida 44</p>
-                            <p class="ti-sub">Centro de Goiânia — GO</p>
+                            <p class="ti-val">Parque Atheneu</p>
+                            <p class="ti-sub">Parque Atheneu, Rua AT 7, Unidade 301, 2, Goiânia, Goiás</p>
                         </div>
                     </div>
                     <div class="ti-item">
                         <span class="ti-dot"></span>
                         <div>
                             <p class="ti-label">Beneficiários</p>
-                            <p class="ti-val">Moradores de Rua</p>
+                            <p class="ti-val">Pessoas em situação de vulnerabilidade social</p>
                             <p class="ti-sub">Todos que estejam na região no momento da entrega</p>
                         </div>
                     </div>
@@ -270,7 +280,7 @@
                             </svg>
                         </div>
                         <p class="cc-label">Telefone</p>
-                        <p class="cc-val">(62) 0000-0000</p>
+                        <p class="cc-val">(62) 98447-6080</p>
                         <p class="cc-sub">Segunda a Sexta, 9h–18h</p>
                     </div>
                     <div class="cc">
@@ -283,7 +293,7 @@
                             </svg>
                         </div>
                         <p class="cc-label">E-mail</p>
-                        <p class="cc-val">contato@amorevida.org</p>
+                        <p class="cc-val">geavesp@gmail.com</p>
                         <p class="cc-sub">Resposta em até 48 horas</p>
                     </div>
                     <div class="cc">
@@ -296,7 +306,7 @@
                             </svg>
                         </div>
                         <p class="cc-label">Endereço</p>
-                        <p class="cc-val">Centro, Goiânia — GO</p>
+                        <p class="cc-val">Parque Atheneu, Rua AT 7, Unidade 301, 2, Goiânia, Goiás</p>
                         <p class="cc-sub">Informações pelo contato</p>
                     </div>
                 </div>
@@ -358,7 +368,9 @@
                 </div>
                 <div class="footer-hor">
                     <p class="footer-hor-title">Trabalhos Sociais</p>
-                    <p class="footer-hor-sub">Consulte nossos contatos</p>
+                    <p class="footer-hor-sub">Entrega de alimentos</p>
+                    <p class="footer-hor-sub">Sopa Fraterna</p>
+                    <p class="footer-hor-sub">Mãezinha do Céu</p>
                 </div>
             </div>
         </div>
@@ -369,6 +381,8 @@
         </div>
     </footer>
 
-    <script src="../../js/main.js"></script>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

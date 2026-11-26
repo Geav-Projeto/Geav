@@ -1,0 +1,129 @@
+/* ── Botão Entrar no menu ───────────────────────── */
+.nav a.nav-entrar {
+    padding: 9px 18px;
+    border: 1px solid var(--gold-light);
+    color: var(--gold);
+    transition: background 0.2s, color 0.2s;
+}
+.nav a.nav-entrar:hover { background: var(--gold); color: var(--navy); }
+
+/* ── Card de evento em destaque ─────────────────── */
+.destaque { background: var(--navy-deep); padding: 72px 0; }
+.destaque[hidden] { display: none; }
+
+.destaque-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--navy);
+    border: 1px solid rgba(201,168,76,0.3);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+.destaque-card--sem-imagem { grid-template-columns: 1fr; }
+
+.destaque-img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; }
+
+.destaque-corpo {
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.destaque-selo {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold);
+    align-self: flex-start;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+}
+
+.destaque-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(30px, 3.5vw, 44px);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.destaque-info { font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 14px; line-height: 1.5; }
+.destaque-info strong {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 3px;
+}
+
+.destaque-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+    margin-top: 6px;
+    white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+    .destaque { padding: 48px 0; }
+    .destaque-card { grid-template-columns: 1fr; }
+    .destaque-img { min-height: 220px; }
+    .destaque-corpo { padding: 32px 24px; }
+}
+
+/* ── Página de login ────────────────────────────── */
+.login-pagina {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.login-caixa {
+    width: 100%;
+    max-width: 400px;
+    background: var(--navy-mid);
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 40px 32px;
+}
+.login-caixa h1 { font-family: var(--font-serif); font-size: 34px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+.login-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 28px; line-height: 1.6; }
+.login-caixa label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+}
+.login-caixa input {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 14px;
+}
+.login-caixa input:focus { outline: none; border-color: var(--gold); }
+.login-caixa button { width: 100%; border: none; cursor: pointer; }
+.login-caixa button:disabled { opacity: 0.6; cursor: wait; }
+.login-erro { min-height: 20px; font-size: 13px; color: #ff9b9b; margin-bottom: 14px; }
+.login-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+}
+.login-voltar:hover { color: var(--gold); }
